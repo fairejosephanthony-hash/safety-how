@@ -35,14 +35,25 @@
             <input type="text" placeholder="Search">
         </div>
         <div class="nav-actions">
-            <i class="fa-regular fa-envelope"></i>
-            <i class="fa-solid fa-grip"></i>
-            <i class="fa-regular fa-bell"></i>
+            <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-svg-icon">
+                <path d="M3.20402 9.4143L15.9992 15.8111L28.7944 9.4143C28.747 8.59901 28.3898 7.83268 27.7957 7.27227C27.2017 6.71185 26.4159 6.39975 25.5992 6.3999H6.39922C5.58255 6.39975 4.79673 6.71185 4.2027 7.27227C3.60867 7.83268 3.25139 8.59901 3.20402 9.4143Z" fill="currentColor"/>
+                <path d="M28.7992 12.9887L15.9992 19.3887L3.19922 12.9887V22.3999C3.19922 23.2486 3.53636 24.0625 4.13648 24.6626C4.73659 25.2628 5.55053 25.5999 6.39922 25.5999H25.5992C26.4479 25.5999 27.2618 25.2628 27.862 24.6626C28.4621 24.0625 28.7992 23.2486 28.7992 22.3999V12.9887Z" fill="currentColor"/>
+            </svg>
+            <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-svg-icon">
+                <path d="M8.00078 4.7998C6.23347 4.7998 4.80078 6.23249 4.80078 7.9998V11.1998C4.80078 12.9671 6.23347 14.3998 8.00078 14.3998H11.2008C12.9681 14.3998 14.4008 12.9671 14.4008 11.1998V7.9998C14.4008 6.23249 12.9681 4.7998 11.2008 4.7998H8.00078Z" fill="currentColor"/>
+                <path d="M8.00078 17.5998C6.23347 17.5998 4.80078 19.0325 4.80078 20.7998V23.9998C4.80078 25.7671 6.23347 27.1998 8.00078 27.1998H11.2008C12.9681 27.1998 14.4008 25.7671 14.4008 23.9998V20.7998C14.4008 19.0325 12.9681 17.5998 11.2008 17.5998H8.00078Z" fill="currentColor"/>
+                <path d="M17.6008 7.9998C17.6008 6.23249 19.0335 4.7998 20.8008 4.7998H24.0008C25.7681 4.7998 27.2008 6.23249 27.2008 7.9998V11.1998C27.2008 12.9671 25.7681 14.3998 24.0008 14.3998H20.8008C19.0335 14.3998 17.6008 12.9671 17.6008 11.1998V7.9998Z" fill="currentColor"/>
+                <path d="M22.4008 17.5998C23.2844 17.5998 24.0008 18.3161 24.0008 19.1998V20.7998H25.6008C26.4844 20.7998 27.2008 21.5162 27.2008 22.3998C27.2008 23.2835 26.4844 23.9998 25.6008 23.9998H24.0008V25.5998C24.0008 26.4835 23.2844 27.1998 22.4008 27.1998C21.5171 27.1998 20.8008 26.4835 20.8008 25.5998V23.9998H19.2008C18.3171 23.9998 17.6008 23.2835 17.6008 22.3998C17.6008 21.5161 18.3171 20.7998 19.2008 20.7998H20.8008V19.1998C20.8008 18.3161 21.5171 17.5998 22.4008 17.5998Z" fill="currentColor"/>
+            </svg>
+            <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-svg-icon">
+                <path d="M16.0008 3.2002C10.6989 3.2002 6.40083 7.49826 6.40083 12.8002V18.5375L5.26946 19.6688C4.81186 20.1264 4.67497 20.8146 4.92262 21.4125C5.17027 22.0104 5.75369 22.4002 6.40083 22.4002H25.6008C26.248 22.4002 26.8314 22.0104 27.079 21.4125C27.3267 20.8146 27.1898 20.1264 26.7322 19.6688L25.6008 18.5375V12.8002C25.6008 7.49826 21.3028 3.2002 16.0008 3.2002Z" fill="currentColor"/>
+                <path d="M16.0008 28.8002C13.3498 28.8002 11.2008 26.6512 11.2008 24.0002H20.8008C20.8008 26.6512 18.6517 28.8002 16.0008 28.8002Z" fill="currentColor"/>
+            </svg>
             <div class="user-avatar-small">GM</div>
         </div>
     </header>
 
-    <main class="container">
+    <main class="container" id="mainContainer">
         <aside class="sidebar">
             <div class="profile-card">
                 <div class="banner">
@@ -126,7 +137,7 @@
             </div>
         </aside>
 
-        <section class="main-content">
+        <section class="main-content" id="mainFeed">
             <div class="content-header">
                 <div class="filter-tabs">
                     <button class="tab active">All Questions</button>
@@ -140,10 +151,10 @@
                     <button class="add-btn" id="menuToggle"><i class="fa-solid fa-plus"></i></button>
                     <div class="popout-menu" id="actionMenu">
                         <ul>
-                            <li>Edit Question</li>
-                            <li>Bookmark Question</li>
-                            <li>Share Question</li>
-                            <li class="delete">Delete Question</li>
+                            <li><i class="fa-regular fa-pen-to-square"></i> Edit Question</li>
+                            <li><i class="fa-regular fa-bookmark"></i> Bookmark Question</li>
+                            <li><i class="fa-regular fa-share-from-square"></i> Share Question</li>
+                            <li class="delete"><i class="fa-regular fa-trash-can"></i> Delete Question</li>
                         </ul>
                     </div>
                 </div>
@@ -156,7 +167,7 @@
                 <input type="text" placeholder="Search">
             </div>
 
-            <div class="question-list">
+            <div class="question-list" id="questionList">
                 <article class="question-card">
                     <div class="question-header">
                         <span class="icon">❓</span>
@@ -264,7 +275,46 @@
                 </article>
             </div>
         </section>
+
+        <!-- Write Question Section -->
+        <section class="main-content" id="writeQuestionSection" style="display: none;">
+            <button class="go-back-btn" id="goBackBtn">
+                <i class="fa-solid fa-arrow-left"></i> Go back
+            </button>
+
+            <div class="write-card">
+                <h2 class="write-title">Write a Question</h2>
+
+                <div class="form-group">
+                    <label>Question</label>
+                    <input type="text" id="questionTitle" placeholder="What's on your mind?">
+                </div>
+
+                <div class="form-group">
+                    <label>Question Description</label>
+                    <textarea id="questionDesc" rows="8"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Keywords (Optional)</label>
+                    <input type="text" id="questionKeywords" placeholder="e.g. #Safety #Health">
+                </div>
+
+                <div class="form-actions">
+                    <button class="cancel-btn" id="cancelForm">CANCEL</button>
+                    <button class="save-btn" id="saveQuestion">SAVE</button>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+        <div class="loader-container">
+            <div class="spinner"></div>
+            <p>Posting your question...</p>
+        </div>
+    </div>
 
     <script>
         const toggle = document.getElementById('menuToggle');
@@ -279,6 +329,149 @@
             if (!menu.contains(e.target) && e.target !== toggle) {
                 menu.classList.remove('show');
             }
+        });
+        // Navigation active state toggle
+        const navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const text = link.textContent.trim().toLowerCase();
+                if (text === 'home' || text === 'feeds') {
+                    e.preventDefault();
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                    // Return to feed if in write section
+                    showSection('mainFeed');
+                }
+            });
+        });
+
+        // Write Question Form Logic
+        const shareBtn = Array.from(document.querySelectorAll('.popout-menu li')).find(li => li.textContent.includes('Share Question'));
+        const mainFeed = document.getElementById('mainFeed');
+        const writeSection = document.getElementById('writeQuestionSection');
+        const saveBtn = document.getElementById('saveQuestion');
+        const cancelBtn = document.getElementById('cancelForm');
+        const goBackBtn = document.getElementById('goBackBtn');
+        const questionList = document.getElementById('questionList');
+
+        // Persistence Logic
+        const STORAGE_KEY = 'safety_how_questions';
+
+        function getSavedQuestions() {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            return saved ? JSON.parse(saved) : [];
+        }
+
+        function saveQuestionToStorage(question) {
+            const questions = getSavedQuestions();
+            questions.unshift(question); // Newest first
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(questions));
+        }
+
+        function createQuestionHTML(title, desc, keywords, time = 'Just now') {
+            const article = document.createElement('article');
+            article.className = 'question-card';
+            
+            let tagsHtml = '';
+            if (keywords) {
+                keywords.split(' ').forEach(tag => {
+                    const cleanTag = tag.trim().startsWith('#') ? tag.trim() : '#' + tag.trim();
+                    tagsHtml += `<span class="tag">${cleanTag}</span> `;
+                });
+            }
+
+            article.innerHTML = `
+                <div class="question-header">
+                    <div class="icon">💬</div>
+                    <h3>${title}</h3>
+                </div>
+                <p class="question-body">${desc}</p>
+                <div class="tags">${tagsHtml}</div>
+                <div class="question-meta">
+                    <span><i class="fa-regular fa-clock"></i> ${time}</span>
+                    <span><i class="fa-regular fa-comment"></i> 0 Comments</span>
+                    <span><i class="fa-regular fa-thumbs-up"></i> 0 Likes</span>
+                </div>
+                <div class="question-actions">
+                    <button class="view-btn">View full question</button>
+                    <button class="bookmark-btn">Bookmark</button>
+                </div>
+            `;
+            return article;
+        }
+
+        function loadAndRenderQuestions() {
+            const questions = getSavedQuestions();
+            questions.forEach(q => {
+                const card = createQuestionHTML(q.title, q.desc, q.keywords, q.time || 'Recently');
+                questionList.appendChild(card);
+            });
+        }
+
+        // Initialize saved questions on load
+        loadAndRenderQuestions();
+
+        function showSection(sectionId) {
+            if (sectionId === 'mainFeed') {
+                mainFeed.style.display = 'block';
+                writeSection.style.display = 'none';
+            } else {
+                mainFeed.style.display = 'none';
+                writeSection.style.display = 'block';
+                window.scrollTo(0, 0);
+            }
+        }
+
+        shareBtn.addEventListener('click', () => {
+            menu.classList.remove('show');
+            showSection('writeQuestionSection');
+        });
+
+        cancelBtn.addEventListener('click', () => showSection('mainFeed'));
+        goBackBtn.addEventListener('click', () => showSection('mainFeed'));
+
+        saveBtn.addEventListener('click', () => {
+            const title = document.getElementById('questionTitle').value.trim();
+            const desc = document.getElementById('questionDesc').value.trim();
+            const keywords = document.getElementById('questionKeywords').value.trim();
+
+            if (!title || !desc) {
+                alert("It has to be something written before it will be posted. Both Question and Description are required.");
+                return;
+            }
+
+            // Show loading transition
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            loadingOverlay.style.display = 'flex';
+
+            // Simulate loading for 3 seconds
+            setTimeout(() => {
+                const newQuestion = { 
+                    title, 
+                    desc, 
+                    keywords, 
+                    time: 'Just now' 
+                };
+
+                // Save to persistence
+                saveQuestionToStorage(newQuestion);
+
+                // Prepend to UI
+                const newCard = createQuestionHTML(title, desc, keywords);
+                questionList.insertBefore(newCard, questionList.firstChild);
+
+                // Clear form and return
+                document.getElementById('questionTitle').value = '';
+                document.getElementById('questionDesc').value = '';
+                document.getElementById('questionKeywords').value = '';
+                
+                // Hide loading and show feed
+                loadingOverlay.style.display = 'none';
+                showSection('mainFeed');
+                
+                // Scroll to the new question
+                window.scrollTo(0, 0);
+            }, 3000);
         });
     </script>
 </body>
